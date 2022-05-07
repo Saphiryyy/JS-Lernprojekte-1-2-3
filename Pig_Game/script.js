@@ -2,15 +2,19 @@
 // declarations
 let p0Score = document.querySelector('#score--0');
 let p1Score = document.querySelector('#score--1');
+let p0CurScoreEl = document.querySelector('#current--0');
 let p0CurScore = 0;
+let p1CurScoreEl = document.querySelector('#current--1');
 let p1CurScore = 0;
-let diceEl = document.querySelector('.dice');
 let activePlayer = 0;
+const diceEl = document.querySelector('.dice');
+const btnNew = document.querySelector('.btn--new');
+const btnRoll = document.querySelector('.btn--roll');
+const btnHold = document.querySelector('.btn--hold');
 
 // Starting conditions
 p0Score.textContent = 0;
 p1Score.textContent = 0;
-console.log(p0Score.textContent, p1Score.textContent);
 diceEl.classList.add('hidden');
 
 // handling a one roll
@@ -18,56 +22,28 @@ function rollOne() {
   activePlayer === 0
     ? ((p0CurScore = 0),
       (activePlayer = 1),
-      (document.querySelector('#current--0').textContent = String(p0CurScore)))
+      (document.querySelector('#current--0').textContent = p0CurScore))
     : ((p1CurScore = 0),
       (activePlayer = 0),
-      (document.querySelector('#current--1').textContent = String(p1CurScore)));
+      (document.querySelector('#current--1').textContent = p1CurScore));
 }
 
-// rolling the dice
-document.querySelector('.btn--roll').addEventListener('click', function () {
+// diceRoll functionality
+btnRoll.addEventListener('click', function () {
   let diceRoll = Math.floor(Math.random() * 6 + 1);
-  // calculating current score
-  function adjustCurScore() {
-    activePlayer === 0
-      ? ((p0CurScore = p0CurScore + diceRoll),
-        (document.querySelector('#current--0').textContent =
-          String(p0CurScore)))
-      : ((p1CurScore = p1CurScore + diceRoll),
-        (document.querySelector('#current--1').textContent =
-          String(p1CurScore)));
-  }
-  console.log(diceRoll, activePlayer);
   diceEl.classList.remove('hidden');
-  if (diceRoll === 1) {
-    diceEl.src = 'dice-1.png';
-
+  diceEl.src = `dice-${diceRoll}.png`;
+  if (diceRoll !== 1) {
+    activePlayer === 0 ? (p0CurScore += diceRoll) : (p1CurScore += diceRoll);
+  } else if (diceRoll === 1) {
     rollOne();
-  } else if (diceRoll === 2) {
-    diceEl.src = 'dice-2.png';
-
-    adjustCurScore();
-  } else if (diceRoll === 3) {
-    diceEl.src = 'dice-3.png';
-
-    adjustCurScore();
-  } else if (diceRoll === 4) {
-    diceEl.src = 'dice-4.png';
-
-    adjustCurScore();
-  } else if (diceRoll === 5) {
-    diceEl.src = 'dice-5.png';
-
-    adjustCurScore();
-  } else if (diceRoll === 6) {
-    diceEl.src = 'dice-6.png';
-
-    adjustCurScore();
   }
+  p0CurScoreEl.textContent = p0CurScore;
+  p1CurScoreEl.textContent = p1CurScore;
 });
 
 // the hold functionality
-document.querySelector('.btn--hold').addEventListener('click', function () {
+btnHold.addEventListener('click', function () {
   if (activePlayer === 0) {
     p0Score.textContent = Number(p0Score.textContent) + p0CurScore;
     document.querySelector('#current--0').textContent = 0;
@@ -82,13 +58,13 @@ document.querySelector('.btn--hold').addEventListener('click', function () {
 });
 
 // the new game functionality
-document.querySelector('.btn--new').addEventListener('click', function () {
+btnNew.addEventListener('click', function () {
   p0Score.textContent = 0;
   p1Score.textContent = 0;
   p0CurScore = 0;
-  document.querySelector('#current--0').textContent = 0;
+  p0CurScoreEl.textContent = 0;
   p1CurScore = 0;
-  document.querySelector('#current--1').textContent = 0;
+  p1CurScoreEl.textContent = 0;
   activePlayer = 0;
   diceEl.classList.add('hidden');
 });
