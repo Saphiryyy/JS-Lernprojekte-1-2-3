@@ -22,6 +22,8 @@ Konkret war die Aufgabenstellung, dass mittels Clicks auf einen der drei Buttons
 
    - Wird eine 1 gewürfelt, so verliert der aktive Spieler seinen gesamten momentanen Score und der andere Spieler ist an der Reihe.
 
-   - Statt zu würfeln kann sich der aktive Spieler entscheiden seinen momentanen Score zu halten. In diesem Fall wird der momentane Score auf das Punktekonto des aktiven Spielers gutgeschrieben und der andere Spieler ist an der Reihe.
+   - Statt zu würfeln kann sich der aktive Spieler entscheiden seinen momentanen Score zu halten. In diesem Fall wird der momentane Score auf den Gesamtscore des aktiven Spielers gutgeschrieben und der andere Spieler ist an der Reihe.
 
-   - Gewonnen hat der Spieler, der zuerst 100 Punkte erreicht.
+   - Gewonnen hat der Spieler, der zuerst 100 Punkte Gesamtscore erreicht.
+
+Zusätzlich zu den oben genannten Themen war dieses Projekt vor allem eine Übung im Refactoring. Mein Code ging durch mehrere Iterationen, um am Ende eine möglichst schlankes und sauberes Programm zu schreiben.

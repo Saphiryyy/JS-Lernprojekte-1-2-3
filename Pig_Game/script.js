@@ -18,7 +18,7 @@ function switchPlayer() {
   activePlayer = activePlayer === 0 ? 1 : 0;
 }
 
-// Starting conditions
+// Initialising the game
 
 function init() {
   activePlayer = 0;
