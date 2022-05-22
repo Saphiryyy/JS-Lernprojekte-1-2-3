@@ -2,7 +2,11 @@
 
 Hi!
 
-Dies sind drei kleine Anfängerprojekte, die Ich mir für das erste Erlernen von Javascript im Internet rausgesucht habe. Die HTML und CSS Elemente sind größtenteils fertig übernommen, sämtliches JS ist eigenständig gecoded. Die drei Projekte sind:
+Mein Name ist Geriet Berbrich, ich bin 27 Jahre alt und im Moment noch Student, möchte aber nun eine Ausbildung zum Fachinformatiker der Anwendungsentwicklung absolvieren. Um mich darauf vorzubereiten und meine Kompetenz, Programmieren zu erlernen, habe Ich mir Javascript als erste Sprache und einige Lernprojekte im Internet dazu herausgesucht, die Sie hier im Repository finden.
+
+Die HTML und CSS Elemente sind größtenteils fertig übernommen, sämtliches JS ist eigenständig gecoded.
+
+Die drei Projekte sind:
 
 1. Ein Random Number Game, bei dem es darum geht, eine zufällige Zahl zwischen 1 und 20 zu erraten und einen möglichst hohen Highscore zu erreichen. Es gelten folgende Regeln:
 
