@@ -34,4 +34,4 @@ Zusätzlich zu den oben genannten Themen war dieses Projekt vor allem eine Übun
 
 Das Progammieren und Lernen hat mir viel Freude bereitet, und Ich hoffe, dass Ich Sie etwas von meinem Interesse und Lernkompetenz überzeugen konnte. Auch wenn diese Projekte schlicht sein mögen denke ich doch, dass meine Implementierung überzeugen kann.
 
-Zu guter Letzt noch Danke an David für seinen Crashkurs in gitHub, und an Patrick, Jan und Dodo, dass Ich meinen Code mit Ihnen teilen durfte!
+Zu guter Letzt noch Danke an David für seinen Crashkurs in gitHub, und an Patrick, Jan und Dodo dafür, dass Ich meinen Code mit Ihnen teilen durfte!
