@@ -1,70 +1,98 @@
 'use strict';
 // declarations
-let p0Score = document.querySelector('#score--0');
-let p1Score = document.querySelector('#score--1');
-let p0CurScoreEl = document.querySelector('#current--0');
-let p0CurScore = 0;
-let p1CurScoreEl = document.querySelector('#current--1');
-let p1CurScore = 0;
-let activePlayer = 0;
+let score0El = document.querySelector('#score--0');
+let score1El = document.querySelector('#score--1');
+let current0El = document.querySelector('#current--0');
+let current1El = document.querySelector('#current--1');
+const player0El = document.querySelector('.player--0');
+const player1El = document.querySelector('.player--1');
 const diceEl = document.querySelector('.dice');
 const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
+let scores, currentScore, activePlayer, playing;
+
+function switchPlayer() {
+  player0El.classList.toggle('player--active');
+  player1El.classList.toggle('player--active');
+  activePlayer = activePlayer === 0 ? 1 : 0;
+}
 
 // Starting conditions
-p0Score.textContent = 0;
-p1Score.textContent = 0;
-diceEl.classList.add('hidden');
 
-// handling a one roll
-function rollOne() {
-  activePlayer === 0
-    ? ((p0CurScore = 0),
-      (activePlayer = 1),
-      (document.querySelector('#current--0').textContent = p0CurScore))
-    : ((p1CurScore = 0),
-      (activePlayer = 0),
-      (document.querySelector('#current--1').textContent = p1CurScore));
+function init() {
+  activePlayer = 0;
+  currentScore = 0;
+  scores = [0, 0];
+  playing = true;
+  score0El.textContent = 0;
+  score1El.textContent = 0;
+  current0El.textContent = 0;
+  current1El.textContent = 0;
+  player0El.classList.add('player--active');
+  player1El.classList.remove('player--active');
+  player0El.classList.remove('player--winner');
+  player1El.classList.remove('player--winner');
+  diceEl.classList.add('hidden');
 }
+// Setting up the game
+init();
 
 // diceRoll functionality
 btnRoll.addEventListener('click', function () {
-  let diceRoll = Math.floor(Math.random() * 6 + 1);
-  diceEl.classList.remove('hidden');
-  diceEl.src = `dice-${diceRoll}.png`;
-  if (diceRoll !== 1) {
-    activePlayer === 0 ? (p0CurScore += diceRoll) : (p1CurScore += diceRoll);
-  } else if (diceRoll === 1) {
-    rollOne();
+  if (playing) {
+    // Generating random diceroll
+    let diceRoll = Math.floor(Math.random() * 6 + 1);
+
+    // Displaying dice
+    diceEl.classList.remove('hidden');
+    diceEl.src = `dice-${diceRoll}.png`;
+
+    // diceroll > 1
+    if (diceRoll !== 1) {
+      currentScore += diceRoll;
+      document.getElementById(`current--${activePlayer}`).textContent =
+        currentScore;
+
+      // diceroll = 1
+    } else {
+      currentScore = 0;
+      document.getElementById(`current--${activePlayer}`).textContent =
+        currentScore;
+      switchPlayer();
+    }
   }
-  p0CurScoreEl.textContent = p0CurScore;
-  p1CurScoreEl.textContent = p1CurScore;
 });
 
 // the hold functionality
 btnHold.addEventListener('click', function () {
-  if (activePlayer === 0) {
-    p0Score.textContent = Number(p0Score.textContent) + p0CurScore;
-    document.querySelector('#current--0').textContent = 0;
-    activePlayer = 1;
-    p0CurScore = 0;
-  } else if (activePlayer === 1) {
-    p1Score.textContent = Number(p1Score.textContent) + p1CurScore;
-    document.querySelector('#current--1').textContent = 0;
-    activePlayer = 0;
-    p1CurScore = 0;
+  if (playing) {
+    // adjusting and displaying score
+    scores[activePlayer] += currentScore;
+    document.querySelector(`#score--${activePlayer}`).textContent =
+      scores[activePlayer];
+    document.getElementById(`current--${activePlayer}`).textContent = 0;
+
+    // checking for win
+    if (scores[activePlayer] >= 100) {
+      document
+        .querySelector(`.player--${activePlayer}`)
+        .classList.add('player--winner');
+      document
+        .querySelector(`.player--${activePlayer}`)
+        .classList.remove('player--active');
+      diceEl.classList.add('hidden');
+      playing = false;
+    } else {
+      // switching active player
+      currentScore = 0;
+      switchPlayer();
+    }
   }
 });
 
 // the new game functionality
 btnNew.addEventListener('click', function () {
-  p0Score.textContent = 0;
-  p1Score.textContent = 0;
-  p0CurScore = 0;
-  p0CurScoreEl.textContent = 0;
-  p1CurScore = 0;
-  p1CurScoreEl.textContent = 0;
-  activePlayer = 0;
-  diceEl.classList.add('hidden');
+  // initialising new game
+  init();
 });
