@@ -2,7 +2,7 @@
 
 Hi!
 
-Mein Name ist Geriet Berbrich, ich bin 27 Jahre alt und im Moment noch Student, möchte aber nun eine Ausbildung zum Fachinformatiker der Anwendungsentwicklung absolvieren. Um mich darauf vorzubereiten und meine Kompetenz, Programmieren zu erlernen, habe Ich mir Javascript als erste Sprache und einige Lernprojekte im Internet dazu herausgesucht, die Sie hier im Repository finden.
+Mein Name ist Geriet Berbrich, ich bin 27 Jahre alt und im Moment noch Student, möchte aber nun eine Ausbildung zum Fachinformatiker der Anwendungsentwicklung absolvieren. Um mich darauf vorzubereiten und meine Kompetenz, Programmieren zu erlernen, zu demonstrieren, habe Ich mir Javascript als erste Sprache und einige Lernprojekte im Internet dazu herausgesucht, die Sie hier im Repository finden.
 
 Die HTML und CSS Elemente sind größtenteils fertig übernommen, sämtliches JS ist eigenständig gecoded.
 
@@ -31,3 +31,7 @@ Konkret war die Aufgabenstellung, dass mittels Clicks auf einen der drei Buttons
    - Gewonnen hat der Spieler, der zuerst 100 Punkte Gesamtscore erreicht.
 
 Zusätzlich zu den oben genannten Themen war dieses Projekt vor allem eine Übung im Refactoring. Mein Code ging durch mehrere Iterationen, um am Ende eine möglichst schlankes und sauberes Programm zu schreiben.
+
+Das Progammieren und Lernen hat mir viel Freude bereitet, und Ich hoffe, dass Ich Sie etwas von meinem Interesse und Lernkompetenz überzeugen konnte. Auch wenn diese Projekte schlicht sein mögen denke ich doch, dass meine Implementierung überzeugen kann.
+
+Zu guter Letzt noch Danke an David für seinen Crashkurs in gitHub, und an Patrick, Jan und Dodo, dass Ich meinen Code mit Ihnen teilen durfte!
