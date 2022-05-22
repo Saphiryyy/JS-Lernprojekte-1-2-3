@@ -32,6 +32,6 @@ Konkret war die Aufgabenstellung, dass mittels Clicks auf einen der drei Buttons
 
 Zusätzlich zu den oben genannten Themen war dieses Projekt vor allem eine Übung im Refactoring. Mein Code ging durch mehrere Iterationen, um am Ende eine möglichst schlankes und sauberes Programm zu schreiben.
 
-Das Progammieren und Lernen hat mir viel Freude bereitet, und Ich hoffe, dass Ich Sie etwas von meinem Interesse und Lernkompetenz überzeugen konnte. Auch wenn diese Projekte schlicht sein mögen denke ich doch, dass meine Implementierung überzeugen kann.
+Das Progammieren und Lernen hat mir viel Freude bereitet, und Ich hoffe, dass Ich Sie etwas von meinem Interesse und meiner Lernkompetenz überzeugen konnte. Auch wenn diese Projekte schlicht sein mögen denke ich doch, dass meine Implementierung überzeugen kann.
 
 Zu guter Letzt noch Danke an David für seinen Crashkurs in gitHub, und an Patrick, Jan und Dodo dafür, dass Ich meinen Code mit Ihnen teilen durfte!
