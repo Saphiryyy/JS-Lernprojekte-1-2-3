@@ -1,4 +1,4 @@
-# JS-Udemy-Projects-1-2-3
+# JS-Lernprojekte-1-2-3
 
 Hi!
 
