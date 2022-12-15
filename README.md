@@ -2,7 +2,7 @@
 
 Hi!
 
-Mein Name ist Geriet Berbrich, ich bin 27 Jahre alt und im Moment noch Student, möchte aber nun eine Ausbildung zum Fachinformatiker der Anwendungsentwicklung absolvieren. Um mich darauf vorzubereiten und meine Fähigkeit, Programmieren zu erlernen, zu demonstrieren, habe Ich mir Javascript als erste Sprache und einige Lernprojekte im Internet dazu herausgesucht, die Sie hier im Repository finden.
+Um mich auf eine Ausbildung in IT vorzubereiten und meine Fähigkeit, Programmieren zu erlernen zu demonstrieren, habe Ich mir Javascript als erste Sprache und einige Lernprojekte im Internet dazu herausgesucht, die Sie hier im Repository finden.
 
 Die HTML und CSS Elemente d.h. die contents der index.html und style.css Dateien sind größtenteils fertig übernommen, sämtliches JS ist eigenständig gecoded.
 
